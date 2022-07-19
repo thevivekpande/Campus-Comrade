@@ -1,15 +1,15 @@
 import React from "react";
 import Feed from "./Feed.js";
-import QHeader from "./QHeader";
-import "./Quora.css";
+import CampusHeader from "./CampusHeader";
+import "./Campus.css";
 import Sidebar from "./Sidebar";
 import Widget from "./Widget.js";
 
-function Quora() {
+function Campus() {
   return (
-    <div className="quora">
-      <QHeader />
-      <div className="quora__content">
+    <div className="campus">
+      <CampusHeader />
+      <div className="campus__content">
         <Sidebar />
         <Feed />
         <Widget />
@@ -18,4 +18,4 @@ function Quora() {
   );
 }
 
-export default Quora;
+export default Campus;

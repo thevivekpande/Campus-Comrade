@@ -68,10 +68,6 @@
   margin-bottom: 10px;
 }
 
-/* .post__image {
-  background: rgb(0, 140, 255);
-} */
-
 .post__body > img {
   width: 100%;
   object-fit: contain;

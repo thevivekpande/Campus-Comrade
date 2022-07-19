@@ -1,4 +1,4 @@
-.quoraBox {
+.campusBox {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -8,27 +8,27 @@
   cursor: pointer;
 }
 
-.quoraBox:hover {
+.campusBox:hover {
   border: 1px solid rgb(175, 175, 175);
 }
 
-.quoraBox__info {
+.campusBox__info {
   display: flex;
   align-items: center;
 }
 
-.quoraBox__info > h5 {
+.campusBox__info > h5 {
   color: rgb(129, 129, 129);
   font-weight: 300;
   margin-left: 10px;
 }
 
-.quoraBox__quora {
+.campusBox__campus {
   display: flex;
   margin-top: 8px;
 }
 
-.quoraBox__quora > p {
+.campusBox__campus > p {
   color: gray;
   font-weight: bold;
   font-size: large;

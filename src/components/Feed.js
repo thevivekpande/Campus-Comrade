@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import QuorBox from "./QuorBox";
+import CampusBox from "./CampusBox";
 import "./Feed.css";
 import Post from "./Post";
 import db from "../firebase";
@@ -22,7 +22,7 @@ function Feed() {
 
   return (
     <div className="feed">
-      <QuorBox />
+      <CampusBox />
       {posts.map(({ id, questions }) => (
         <Post
           key={id}

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import Login from "./components/auth/Login";
-import Quora from "./components/Quora";
+import Campus from "./components/Campus";
 import { login, logout, selectUser } from "./features/userSlice";
 import { auth } from "./firebase";
 
@@ -26,7 +26,7 @@ function App() {
       console.log(authUser);
     });
   }, [dispatch]);
-  return <div className="App">{user ? <Quora /> : <Login />}</div>;
+  return <div className="App">{user ? <Campus /> : <Login />}</div>;
 }
 
 export default App;

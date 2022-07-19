@@ -8,7 +8,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import LanguageIcon from "@material-ui/icons/Language";
 import Modal from "react-modal";
 
-import "./QHeader.css";
+import "./CampusHeader.css";
 import { Avatar, Button, Input } from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
@@ -18,8 +18,7 @@ import firebase from "firebase";
 
 Modal.setAppElement("#root");
 
-function QHeader() {
- // const logo = 'https://uilogos.co/img/logotype/codelab.png';
+function CampusHeader() {
   const user = useSelector(selectUser);
 
   const [IsmodalOpen, setIsModalOpen] = useState(false);
@@ -43,47 +42,40 @@ function QHeader() {
     setInput("");
     setInputUrl("");
   };
-  
 
-  function setInputs(event){
-     var text = event.target.value;
-     setInput(text);
-     
-    
+  function setInputs(event) {
+    var text = event.target.value;
+    setInput(text);
   }
-  
-  
+
   return (
-    <div className="qHeader">
-      <div className="qHeader__logo">
-        <img
-          src= "./../logo.jpg"
-          alt=""
-        />
+    <div className="campusHeader">
+      <div className="campusHeader__logo">
+        <img src="./../logo.png" alt="" />
       </div>
-      <div className="qHeader__icons">
-        <div className="active qHeader__icon">
+      <div className="campusHeader__icons">
+        <div className="active campusHeader__icon">
           <HomeIcon />
         </div>
-        <div className="qHeader__icon">
+        <div className="campusHeader__icon">
           <FeaturedPlayListOutlinedIcon />
         </div>
-        <div className="qHeader__icon">
+        <div className="campusHeader__icon">
           <AssignmentTurnedInOutlinedIcon />
         </div>
-        <div className="qHeader__icon">
+        <div className="campusHeader__icon">
           <PeopleAltOutlinedIcon />
         </div>
-        <div className="qHeader__icon">
+        <div className="campusHeader__icon">
           <NotificationsOutlinedIcon />
         </div>
       </div>
-      <div className="qHeader__input">
+      <div className="campusHeader__input">
         <SearchIcon />
-        <input type="text" placeholder="Search Quora" />
+        <input type="text" placeholder="Search Campus" />
       </div>
-      <div className="qHeader__Rem">
-        <div className="qHeader__avatar">
+      <div className="campusHeader__Rem">
+        <div className="campusHeader__avatar">
           <Avatar
             onClick={() => auth.signOut()}
             className="Avatar"
@@ -136,7 +128,6 @@ function QHeader() {
           <div className="modal__Field">
             <Input
               value={input}
-              
               onChange={setInputs}
               type="text"
               placeholder="Start your question with 'What', 'How', 'Why', etc. "
@@ -165,4 +156,4 @@ function QHeader() {
   );
 }
 
-export default QHeader;
+export default CampusHeader;
